@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignUp Page</title>
+        <style>
+                 *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+
+            header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+    margin-top: -15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+@media(max-width:768px) {
+
+.nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #signupForm{
+        margin-left: -470px;
+        width: 300px;
+
+    }
+
+    .input-group{
+        width: 350px;
+    }
+
+    .signup-box{
+        margin-left: -470px;
+        width: 300px;
+    }
+
+    header {
+        width:420px;
+    }
+
+    .btn1 {
+        width:300px;
+    }
+
+
+}
+            .signup-box {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                margin-top:100px;
+                border-radius: 20px;
+                width: 400px;
+                backdrop-filter: blur(10px);
+                color: white;
+                padding:30px;
+                margin-left: 470px;
+
+            }
+
+            .signup-box h2 {
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .signup-box p {
+                text-align: center;
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+
+            #signupForm {
+                display: flex;
+                flex-direction: column;
+                margin-top: 5px;
+                padding:10px;
+                
+            }
+
+            .input-group {
+                margin-bottom: 10px;
+
+            }
+
+            .input-group label {
+                display: block;
+                font-size: 15px;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 5px;
+                font-size: 14px;
+                border: 2px solid white;
+                border-radius: 15px;
+                background-color: white;
+                outline: none;
+            }
+
+            .btn1 {
+                width:70%;
+                padding:10px;
+                font-size: 15px;
+                font-weight: bold;
+                background-color: white;
+                color:black;
+                border-radius: 20px;
+                cursor: pointer;
+                margin-top: 10px;
+                border: 1px solid black;
+                margin-left: 50px;
+                
+            }
+
+            .btn1:hover {
+                background-color: #ffcc00;
+                color:white;
+
+            }
+
+            .link {
+                text-align: center;
+                margin-top:20px;
+                font-weight: bold;
+            }
+
+            .link a {
+                color: #ffcc00;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        </style>
+
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TalentVista</title>
+    <link rel="icon" type="image/png" href="inminilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="incss.css">
+    </head>
+
+    <body>
+ <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+            <img src="apex.jpg" alt="logo"></a>
+
+            </div>
+
+           <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Property Listings</a></li>
+                <li><a href="agents.html">Agents Directory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+     </header>
+       
+      <form id="signupForm">
+
+        <div class="signup-box">
+            <h2>Create Account</h2>
+            <p>Join Apex Real Estate Today</p>
+
+          
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Contact Number</label>
+                    <input type="number" placeholder="enter your number" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="create your password" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="confirm password" required>
+                </div>
+
+                <div class="input-group">
+                <button type="submit" class="btn1">SignUp</button>
+                </div>
+                
+       
+
+            <div class="link">Already have an account? <a href="login.html">Login</a>
+            </div>
+        </div>
+
+    </form>
+
+
+
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', function(e){
+                e.preventDefault();
+                alert('Account Created Successfully');
+
+                window.location.href="login.html";
+            });
+
+              const navLinks = document.getElementById("navLinks"); 
+             const hamburger = document.getElementById("hamburger");
+            
+             
+            hamburger.addEventListener("click",function(){
+                navLinks.classList.toggle("active");
+            }); 
+        </script>
+    </body>
+</html>
