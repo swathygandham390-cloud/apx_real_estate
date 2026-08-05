@@ -1,0 +1,926 @@
+<html>
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apex Real Estate</title>
+    <link rel="icon" type="image/png" href="real estate.img">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 30px;
+}
+.nav-links li{
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+       
+
+       
+       
+       
+       
+       
+            
+
+            
+        
+
+
+       
+
+        .hero-banner {
+            background: #c0c7d1;
+            padding: 50px 16px 0;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            max-height: 460px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+        }
+
+        .hero-content {
+            background: #c0c7d1;
+            padding: 20px 16px 116px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            color: blue;
+            margin: 0 0 12px;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+        }
+
+        .hero-content p {
+            margin: 0 auto 18px;
+            max-width: 700px;
+            line-height: 1.6;
+            color: #1b1a1a;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+
+
+
+
+
+
+
+
+        .class {
+            background-color: rgb(197, 152, 93);
+            text-align: center;
+            padding: 40px;
+
+
+        }
+
+        .btn-Explore {
+            display: inline-block;
+            color: orange;
+            color: black;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(201, 228, 228);
+        }
+
+        .btn-Explore:hover {
+            color: #0d47a1;
+            justify-content: center;
+            align-items: center;
+        }
+        .who-we-are-heading{
+            color: blue;
+            text-align: center;
+            padding-left: 300px;
+        }
+        .milestones-heading{
+            text-align: center !important;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .left h2 {
+            margin-bottom: 20px;
+        }
+
+        .right {
+            flex: 1;
+            min-width: 28px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px blueviolet;
+            display: block;
+        }
+
+        @media (max-width:768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .btn-contactus {
+            display: inline-block;
+            background-color: blue;
+            color: black;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .btn-contactus:hover {
+            background-color: pink;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .heading {
+            text-align: center;
+            color: blue;
+            margin-bottom: 50px;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .better {
+            background: pink;
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px blueviolet;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.35s ease;
+        }
+
+        .better .icon {
+            margin-bottom: 20px;
+
+        }
+
+        .better h3 {
+            margin-bottom: 15px;
+            transition: color 0.35s ease;
+
+        }
+
+        .better p {
+            transition: color 0.35s ease;
+            line-height: 1.6;
+        }
+
+        .better:hover {
+            background: green;
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25 px yellow;
+        }
+
+        .better:hover h3,
+        .better:hover p {
+            color: aquamarine;
+        }
+
+        .builder {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .info-box {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 12px green;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            transition: background 0.4s ease, transform 0.3s ease;
+        }
+
+        .info-box h3 {
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0;
+            transition: margin-bottom 0.4s ease;
+        }
+
+        .info-box p {
+            color: blue;
+            line-height: 1.5;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+
+        .info-box:hover {
+            background: rgb(94, 212, 110);
+            transform: translateY(-6px);
+        }
+
+        .info-box:hover h3 {
+            margin-bottom: 14px;
+        }
+
+        .info-box:hover p {
+            max-height: 150px;
+            opacity: 1;
+            margin-top: 4px;
+
+
+        }
+        footer {
+    background: #1B2233;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-grid > div{
+    flex: 1 1 220px;
+}
+
+.footer-grid a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.copyright {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 20px;
+}
+
+
+       
+       .page {
+            justify-content: center;
+            display: flex;
+            padding: 20px;
+        }
+
+        .ledger {
+            width: 100%;
+            max-width: 480px;
+            background: rgb(218, 210, 210);
+            border: 1px solide pink;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .ledger h3 {
+            margin-bottom: 24px;
+        }
+
+        .ledger-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            
+            padding: 10px 0;
+
+        }
+
+        .ledger-row .yr {
+            color: black;
+
+        }
+
+        .ledger-row .ev {
+            color: black;
+            text-align: right;
+        }
+        .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 90px;
+        text-align: center;
+    }
+    .stat {
+        background: #8B6B3D;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    }
+    .stat h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #dddddd;
+    }
+    .stat p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #f5f5f5;
+    }
+
+    .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px 20px;
+    }
+
+    ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+        margin-top:15px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:180px 30px 80px;
+    }
+
+    .hero-text h1{
+        font-size:38px;
+    }
+
+    .hero-text p{
+        text-align:center;
+    }
+
+    .section{
+        padding:60px 30px;
+    }
+}
+
+@media(max-width:768px){
+.navbar{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+}
+.menu-icon{
+    font-size: 18px;
+}
+    .page{
+        padding: 10px;
+    }
+    .letter{
+        max-width: 100%;
+        padding: 15px;
+    }
+    .ledger-row{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0;
+    }
+    .ledger-row .yr{
+        margin-bottom: 4px;
+    }
+    .ledger-row .ev{
+        text-align: left;
+    }
+    .milestones-heading{
+        font-size: 1.5rem;
+    }
+    .who-we-are-heading{
+        padding-left: 16px;
+        text-align: center;
+        
+    }
+    .ledger-row{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+    .ledger-row .yr{
+        font-size: 1.1rem;
+    }
+    .ledger-row .ev{
+        margin-top: 2px;
+    }
+    .page{
+        padding: 0 16px;
+    }
+    .container{
+        padding: 0 10px;
+    }
+    .container img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+     .nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .hamburger,
+    .menu-toggle{
+        cursor: pointer;
+    }
+
+    .hero-text h1{
+        font-size:32px;
+    }
+
+    .section h2{
+        font-size:30px;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+
+    .cta h2{
+        font-size:30px;
+    }
+
+    .logo img{
+        width:55px;
+        height:55px;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+}
+
+@media(max-width:480px){
+    .container img{
+        border-radius: 8px;
+    }
+
+    .navbar{
+        padding:15px;
+    }
+
+    ul{
+        gap:10px;
+    }
+
+    ul li a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:170px 20px 60px;
+    }
+
+    .hero-text h1{
+        font-size:28px;
+    }
+
+    .hero-text p{
+        font-size:15px;
+    }
+
+    .section{
+        padding:50px 20px;
+    }
+
+    .cta{
+        padding:60px 20px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+   <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html"><img src="real estate.img" alt="logo"></a>
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Property Listings</a></li>
+                <li><a href="agents.html">Agents Directory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+
+            </ul>
+
+            <div class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="hero-banner">
+    </div>
+    <div class="hero-content">
+        <h1>Welcome to Apex Real Estate</h1>
+        <p>Finding The Right Property Starts Heare</p>
+        <div class="hero-buttons">
+            <a href="services.html" class="btn-Explore">Explore services</a>
+            <a href="contact.html" class="btn-contactus">Contact Us</a>
+        </div>
+    </div>
+    <br>
+
+
+    <h1 class="who-we-are-heading">Who we are</h1>
+    <div class="container">
+        <div class="left">
+            <h2>About Us</h2>
+            Welcome to Apex Real Estate,
+             your trusted partner for finding the perfect residential and commercial properties. 
+             We offer carefully selected properties that match your lifestyle requirements and budget
+              Whether you are looking to buy sell rent or invest our experienced team providers profesiional guidance throughout the real estate journey.
+            <br>
+
+            <div class="exam">
+                <br>
+                <br>
+                <a href="contact.html" class="btn-contactus">Contactus</a>
+            </div>
+        </div>
+        <div class="right">
+
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlJcQTlPVrOfjuqe2t7NEpEyih_r3bEErIAgvlEdyHEyGLAh0HZUQsxlpY&s=10">
+        </div>
+    </div>
+    <br>
+    <h1 class="heading">Vision & Mission</h1>
+    <div class="box-container">
+        <div class="better">
+            <div class="icon"></div>
+            <h3>our vision</h3>
+            <p>To became a trusted and leading real estate company by providing quality
+                properties reliable services and creating long term value for our customers
+            </p>
+        </div>
+        <div class="better">
+            <div class="icon"></div>
+            <h3>our mission</h3>
+            <p>
+                To provide customers with quality residential and commercial properties.
+                To make the property buying and selling process simple and transparent to understand customers needs and provide suitable property solutions
+                
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+        <h1 class="milestones-heading">Milestones</h1>
+    
+    <div class="page">
+        <div class="ledger">
+            <h3>Milestones</h3>
+            <div class="ledger-row">
+                <span class="yr">2018</span>
+                <span class="ev">company founded </span>
+            </div>
+
+
+            <div class="ledger-row">
+                <span class="yr">202</span>
+                <span class="ev">Growing Our Presence.</span>
+            </div>
+
+            <div class="ledger-row">
+                <span class="yr">2022</span>
+                <span class="ev">Customer Trust</span>
+            </div>
+            <div class="ledger-row">
+                <span class="yr">2010</span>
+                <span class="ev">New reasearch & innvoation campus opens</span>
+            </div>
+            <div class="ledger-row">
+                <span class="yr">2024</span>
+                <span class="ev">Expanding Services.</span>
+
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <center>
+        <h1 style="color: blue;">What We Stand For</h1>
+    </center>
+    <div class="builder">
+        <div class="info-box">
+            <h3>Intigrity </h3>
+            <h3>what we stand for</h3>
+            <p>Honesty in research, teaching , and assesment - no shortcuts.</p>
+        </div>
+        <div class="info-box">
+            <h3>Quality </h3>
+            <h3>What we stand for </h3>
+            <p>We provide Carefully Selected Properties that meet high
+                standards of quality and value.</p>
+        </div>
+        <div class="info-box">
+            <h3>Customer First</h3>
+            <h3>What we stand for</h3>
+            <p>Our customer are at the heart of everything we do We understand their 
+                needs and provide personalized solutions.</p>
+        </div>
+        <div class="info-box">
+            <h3>Impact </h3>
+            <h3>What we stand for</h3>
+            <p>Working that's judged by the problem it actually solves.</p>
+        </div>
+    </div>
+    <center><h1 style="color: blue;">Our Journey In numbers</h1></center>
+        <section class="stats">
+    <div class="stat">
+        <h1>400+</h1>
+        <P>Projects Completed</P>
+    </div>
+
+    <div class="stat">
+        <h1>200+</h1>
+        <P>Happy Clients</P>
+    </div>
+
+    <div class="stat">
+        <h1>10+</h1>
+        <P>Years Experience</P>
+    </div>
+
+    <div class="stat">
+        <h1>25+</h1>
+        <P>Design Experts</P>
+    </div>
+    <br>
+    <br>
+
+</section>
+
+        <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Apx Real Estate</h3>
+
+                <p>
+
+                    Helping organizations innovate and grow with confidence.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : info@realestate.com</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Mon-Fri : 9AM - 6PM</p>
+
+            </div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+
+                    5th Floor, Cyber Towers,<br>
+
+                    Hi-Tech City,<br>
+
+                    Hyderabad, Telangana,<br>
+
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Apx Real Estate. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    </div>
+    
+    <script>
+  const hamburgerBtn=document.getElementById("hamburgerBtn");
+   const navLinks=document.getElementById("navLinks");
+
+  hamburgerBtn.addEventListener("click", function(){
+    navLinks.classList.toggle("active");
+    hamburgerBtn.classList.toggle("active");
+  });
+  </script>
+
+</body>
+
+</html>
