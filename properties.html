@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Properties - Apex</title>
+</head>
+
+<style>
+
+    
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+header {
+    margin-top: -100px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+footer {
+    background: #1B2233;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-grid p {
+    padding-top: 10px;
+    font-size: 18px;
+    width: 70%;
+}
+
+.footer-grid a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 7px;
+}
+
+
+.copyright {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+
+        .hero {
+            background: linear-gradient(135deg, rgba(10,30,79,0.5), rgba(0,119,255,0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTryVLTOMuamIYYb0MT7v0j3hNkcVO8Fm4P8rdmiDCg&s=10') center/cover;
+            height: 68vh;
+            backdrop-filter: blur(-10px);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 90px;
+        }
+
+          .hero-content {
+            color:#fff;
+            box-sizing: border-box;
+            padding: 40px;
+            text-align:center;
+           
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            font-weight: 800;
+            background: linear-gradient(90deg,#0905f1 16%, #f7f307 50%, #f80808 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+    
+
+        .hero p {
+            font-size: 20px;
+            max-width: 650px;
+            margin-bottom:30px;
+            text-align: center;
+            margin-left: 20px;
+            color:#0d0438;
+            font-weight: 600;
+            backdrop-filter: blur(-9px);
+        }
+
+        .hero a {
+            color: #ffff;
+            font-size: 23px;
+            text-decoration: none;
+            background:#eebf04 ;
+            display: inline-block;
+            border-radius: 19px;
+            padding: 10px 0px;
+            width: 250px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .hero a:hover{
+            color: #f9fbfc;
+            background: #1422db;
+            transform: translateY(-8px);
+            box-shadow: 15px 15px 15px  rgba(73, 7, 228, 0.65);
+        }
+
+         .section {
+            padding: 50px 10px;
+            max-width: 1200px;
+            margin: auto;
+           
+        }
+
+        section {
+            padding-top: 30px;
+        }
+
+        .stats h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #100936;
+        }
+
+        .stat-grid {
+             display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+             box-sizing: border-box;
+            background: #052541;
+            padding: 50px;
+            border-radius: 14px;
+
+        }
+
+        .stat-grid h2 {
+            font-size: 30px;
+            color: #1422db;
+            text-align: center;
+        }
+
+         .stat-card {
+               background: linear-gradient(180deg, #f4f3f5 0%, #0935c7 100%);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 80%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+             transition: transform 0.4s ease-in-out;
+        }
+
+        .stat-card:hover {
+              transform: translateY(-10px) scale(1.05);
+        }
+
+        .stat-card img {
+             width: 100%;
+            height: 150px;
+           border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .stat-card h3 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .stat-card p {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .search {
+            padding: 40px 8%;
+           
+        }
+
+        .search-box {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            background: #f5f7fa;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 2px solid #08244e;
+        }
+
+        .search-box i {
+            color: #0077ff;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            outline: none;
+            color: #333;
+        }
+
+        .search-box input::placeholder {
+            color: #888;
+        }
+
+        .search-box input-within {
+            border-color: #0077ff;
+            box-shadow: 0 0 0 3px rgba(0, 119, 255, .03);
+        }
+
+      
+
+          .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+             box-sizing: border-box;
+            background: #052541;
+            padding: 70px;
+            border-radius: 14px;
+        }
+
+        .property-card {
+              background: #fff;
+            padding: 25px;
+            border-radius: 24px;
+            box-shadow: 0 4px 15px rgba(248, 250, 250, 0.65);
+            border-left:3px solid #f0f0f5;
+             border-bottom:3px solid #1e1e36;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+             transition: transform 0.4s ease-in-out;
+        }
+
+        .property-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 220px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .property-card h3 {
+            font-size: 20px;
+            color: #20055e;
+            text-align: center;
+        }
+
+        .property-card .location {
+            color: #2a04ff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .property-card .desc {
+            font-size: 15px;
+            color: #0077ff;
+            margin-bottom: 15px;
+        }
+
+        .property-card .details {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 16px;
+            font-size: 18px;
+            margin-left: 80px;
+            color: darkgreen;
+        }
+
+        .property-card .price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0077ff;
+            margin-bottom: 14px;
+            text-align: center;
+            
+        }
+       
+
+        .property-card .tag-rent {
+            background: white;
+            display: block;
+            font-size: 17px;
+            margin-left: 130px;
+            color: red;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+
+
+        .property-card p {
+              text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        
+
+         .properties h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #100936;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+
+
+        /*---------------------------------------------------------------------*/
+    
+/*---------------------------------------------------------------------*/
+    
+        
+/*---------------------------------------------------------------------*/
+    
+        /* Responsive rules for mobile */
+        @media (max-width: 768px) {
+
+               .nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-left: 4px;
+        height: auto;
+    }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+             .properties-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+
+            .property-card{
+                width: 100%;
+                max-width: none;
+                margin: 0 auto;
+                height: auto;
+                padding: 18px;
+            }
+
+            .property-card a{
+                margin-left: 80px;
+            }
+            .btn-outline1{
+                padding:10px 18px;
+            }
+
+            .footer-grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+</style>
+
+<body>
+
+     <!--header section-->
+
+           <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html"><img src="real estate.jpg" alt="logo"></a>
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Property Listings</a></li>
+                <li><a href="agents.html">Agents Directory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--hero section-->
+   <section class="hero">
+
+
+
+    <div class="hero-content">
+        <h1>Find Your Dream Home</h1>
+        <p>At Apex Estates, we don't just sell properties. We help you find a place where memories are made.
+            With 500+ verified listings in all over India and trusted builders, your perfect home is just one click away.
+        </p>
+        <a href="#properties">Browse Listings Now</a>
+    </div>
+
+   </section> 
+
+
+   <!--hero stats-->
+
+   <section class="stats">
+      <h2>Impacts That Speaks For Us</h2>
+
+    <div class="stat-grid">
+      
+        
+
+        <div class="stat-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPDztMm0H4LFo-LXALSTEvaCHQjPg4f3i0sBSUniOHw&s=10" alt="">
+            <h3>500+</h3>
+            <p>Verified Properties</p>
+        </div>
+
+         <div class="stat-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJcI6-V3ty-rHPyZyFpZDtwhvIy35CUUer1leU0ru5g&s=10" alt="">
+            <h3>1000+</h3>
+            <p>Happy Families</p>
+        </div>
+
+         <div class="stat-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaitepuRSZOSGLvbES0E3yM6eUYb_l2BM9uSJ_xBEXMA&s=10" alt="">
+            <h3>10+</h3>
+            <p>Years Of Experience</p>
+        </div>
+
+         <div class="stat-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj8KmJmxjcv4IBgRTJVVzHVV49OkN2Bzu8ss8_RtyXbA&s=10" alt="">
+            <h3>50+</h3>
+            <p>Trusted Builders</p>
+        </div>
+
+    </div>
+   </section>
+
+   
+
+
+   <!--properties section-->
+
+   <section class="properties" id="properties">
+
+      <h2>Featured Properties</h2>
+
+    <!--search section-->
+
+   <section class="search">
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="search by Property Name,Location...">
+    </div>
+   </section>
+    
+    <div class="properties-grid">
+      
+
+
+        <!--1-->
+        <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvH5xX3Z4q8KMYeDZgkAOZFN6IT6I_dfpGYSKyaMf3pw&s=10" alt="">
+            <h3>3 BHK SEA FACING APARTMENT</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i>Bandra West, Mumbai</p>
+            <p class="desc">Premium 2000 sqft apartment with sea view,gym,pooland 24/7 security. Ready to move.</p>
+            <div class="details">
+                <span><i class="fa fa-bed"></i> 3</span>
+                <span> <i class="fa fa-bathtub"></i> 3</span>
+                <span><i class="fa fa-ruler-combined"></i> 2000 sqft</span>
+            </div>
+            <div class="price">₹ 4.50 Cr</div>
+        </div>
+
+        <!--2-->
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQAp17RKQ0XCozPs2XiqicOS0ud9J2ugvxv4SvyHrPFA&s=10" alt="">
+            <h3>4 BHK LUXURY VILLA</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> South Delhi, Delhi</p>
+            <p class="desc">Spacious villa with private garden, modular kitchen and 3 car parking. Gated society.</p>
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 4</span>
+                <span> <i class="fa fa-bathtub"></i> 4</span>
+                <span><i class="fa fa-ruler-combined"></i> 3500 sqft</span>
+            </div>
+            <div class="price">₹ 6.20 Cr</div>
+        </div>
+
+        <!--3-->
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6qxizN91VJjWRG7v0RLJi5FS7cFTJ_-UnKQ9P5FKycw&s=10" alt="">
+            <h3>2 BHK MODERN APARTMENT</h3>
+            <span class="tag-rent">For Rent</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Koramangala, Bangalore</p>
+            <p class="desc"> Fully furnished flat near IT park. Amenities: Gym, Pool, Clubhouse. Perfect for professionals.</p>
+
+            <div class="details">
+                <span><i class="fa fa-bed"></i> 2</span>
+                <span> <i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1200 sqft</span>
+            </div>
+            <div class="price">₹ 45,000 / month</div>
+        </div>
+
+        <!--4-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczlkRWrYftMmNyC9JFDGYw6m1j-S1PMx0J8esBOEI8Q&s=10" alt="">
+            <h3>Residential Plot</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Gachibowli, Hyderabad</p>
+            <p class="desc">Clear title 2400 sqft plot in gated community. Best for investment. All approvals done.</p>
+
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 3</span>
+                <span> <i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 2400 sqft</span>
+            </div>
+            <div class="price">₹ 90 Lakh</div>
+        </div>
+
+        <!--5-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbfH0bQZD8v0P1saolyiXXEHDonrfd5gWziXpTxrMT8A&s=10" alt="">
+            <h3>3 BHK LUXURY VILLA</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Baner, Pune</p>
+            <p class="desc">1800 sqft villa with garden, modular kitchen, and 2 car parking. ready to move.</p>
+
+            <div class="details">
+                <span><i class="fa fa-bed"></i> 3</span>
+                <span> <i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1800 sqft</span>
+            </div>
+            <div class="price">₹ 1.25 Cr</div>
+        </div>
+
+        <!--6-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wuvL-YZde2TjRyK4NYBE49v2h7Egb6kUcvpbIeTq9Q&s=10" alt="">
+            <h3>1 BHK STUDIO APARTMENT</h3>
+            <span class="tag-rent">For Rent</span>
+            <p class="location"><i class="fa fa-location-dot"></i> SG Highway, Ahmedabad</p>
+            <p class="desc">Newly furnished studio with all amenities. Ideal for students and bachelors.</p>
+
+            <div class="details">
+              <span><i class="fa fa-bed"></i> 1</span>
+                <span> <i class="fa fa-bathtub"></i> 1</span>
+                <span><i class="fa fa-ruler-combined"></i> 650 sqft</span>
+            </div>
+            <div class="price">₹ 18000 / month</div>
+        </div>
+
+        <!--7-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSASDdJwQfBCVgaUBEofAj_X0ORkny3W6Ed9oYq2BJs4Q&s=10" alt="">
+            <h3>5 BHK HERITAGE VILLA</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Mansarovar, Jaipur</p>
+            <p class="desc">Royal style villa with traditional architecture, large lawn and swimming pool.</p>
+
+            <div class="details">
+                <span><i class="fa fa-bed"></i> 5</span>
+                <span> <i class="fa fa-bathtub"></i> 5</span>
+                <span><i class="fa fa-ruler-combined"></i> 5000 sqft</span>
+            </div>
+            <div class="price">₹ 3.75 Cr</div>
+        </div>
+
+        <!--8-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3Y__Gk7PkWJecRxixUU8OD-vREF3p4K5il6VvOKKoQ&s=10" alt="">
+            <h3>2 BHK BEACH VIEW FLAT</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> ECR, Chennai</p>
+            <p class="desc">1100 sqft flat with balcony view sea. Covered parking and power backup available.</p>
+
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 2</span>
+                <span><i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1100 sqft</span>
+            </div>
+            <div class="price">₹ 93 Lakh</div>
+        </div>
+
+        <!--9-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVxBgTLwjesQ3XprMSP8BJXRhE8crHI1xJKA7GGVQnA&s=10" alt="">
+            <h3>3 BHK FLAT APARTMENT</h3>
+            <span class="tag-rent">For Rent</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Salt Lake, Kolkata</p>
+            <p class="desc">Semi-furnished 1500 sqft apartment near metro. School and market nearby.</p>
+
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 3</span>
+                <span><i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1500 sqft</span>
+            </div>
+            <div class="price">₹ 28,000 / month</div>
+        </div>
+
+        <!--10-->
+
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWJRFiFQPYUp_7ofnQZv7kjiKUcYftLAYpyYujRLoLTg&s=10" alt="">
+            <h3>4 BHK BEACH VILLA</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Candolim, Goa</p>
+            <p class="desc">Luxury villa 5 min from beach. Private pool, garden and modern interiors.</p>
+
+            <div class="details">
+                <span><i class="fa fa-bed"></i> 4</span>
+                <span> <i class="fa fa-bathtub"></i> 3</span>
+                <span><i class="fa fa-ruler-combined"></i> 2800 sqft</span>
+            </div>
+            <div class="price">₹ 5.90 Cr</div>
+        </div>
+
+        <!--11-->
+        
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_vbyACsPCExvq8SEz5tu2WAk4o7ZkW0TUMrm-bebng&s=10" alt="">
+            <h3> 2 BHK INDEPENDANT HOUSE</h3>
+            <span class="tag-rent">For Rent</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Gomti Nagar, Lucknow</p>
+            <p class="desc">1600 sqft independant house with parking, garden and modular kitchen. Near metro station.</p>
+
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 3</span>
+                <span> <i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1600 sqft</span>
+            </div>
+            <div class="price">₹ 20,000 / month</div>
+        </div>
+
+        <!--12-->
+          <div class="property-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGu6ybwz7hqX6KyaDarKR2At2qbb03tNnE7csE1iQCYQ&s=10" alt="">
+            <h3>2 BHK Premium Apartment</h3>
+            <span class="tag-rent">For Sale</span>
+            <p class="location"><i class="fa fa-location-dot"></i> Sector 17, Chandigarh</p>
+            <p class="desc">Fully furnished 1300 sqft apartment with city view. Gym, Lift and 24/7 water available.</p>
+
+            <div class="details">
+                 <span><i class="fa fa-bed"></i> 2</span>
+                <span> <i class="fa fa-bathtub"></i> 2</span>
+                <span><i class="fa fa-ruler-combined"></i> 1300 sqft</span>
+            </div>
+            <div class="price">₹ 2.30 Cr</div>
+        </div>
+
+    </div>
+   </section>
+
+
+     <!--footer section-->
+
+        <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Apex Real Estate</h3>
+
+                <p>
+
+                    Helping families to find their dream home.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : info@apexrealestate.com</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Mon-Fri : 9AM - 6PM</p>
+
+            </div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+
+                    5th Floor, Cyber Towers,<br>
+
+                    Hi-Tech City,<br>
+
+                    Hyderabad, Telangana,<br>
+
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Apex Real Estate. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+
+   <script>
+
+    const searchInput = document.getElementById('searchInput');
+    const propertyCards = document.querySelectorAll('.property-card');
+
+    searchInput.addEventListener('keyup',function(){
+
+        let filter = searchInput.value.toLowerCase();
+
+        propertyCards.forEach(card => {
+
+            let title = card.querySelector('h3').textContent.toLowerCase();
+            let location = card.querySelector('.location').textContent.toLowerCase();
+        
+
+            if(title.includes(filter) || location.includes(filter)){
+                card.style.display = 'block';
+            }
+            else {
+                card.style.display='none';
+            }
+        });
+    });
+
+
+    // ===============================
+// Hamburger Menu
+// ===============================
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+
+});
+
+
+   </script>
+</body>
+</html>
