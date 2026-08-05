@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apex RealEstate</title>
+    <link rel="icon" type="image/png" href="inminilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html"><img src="apex.webp" alt="logo"></a>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Property Listings</a></li>
+                <li><a href="agents.html">Agents Directory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+  <section class="hero">
+    <h1>Get in Touch</h1>
+    <p>We'd love to hear from you. Reach out to us for any inquiries or assistance.</p>
+  </section>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    
+    <!-- Inquiry Form Section -->
+    <section class="card form-section">
+      <h2><i class="fa-solid fa-paper-plane"></i> Send an Inquiry</h2>
+      <form id="inquiryForm" onsubmit="handleSubmit(event)">
+        
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" placeholder="e.g. FullName" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiryType">Inquiry Type *</label>
+          <select id="inquiryType" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="properties">Property Inquiries</option>
+            <option value="services">Service Requests</option>
+            <option value="general">General Questions</option>
+
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span>Submit Inquiry</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <!-- Dynamic Success Message Alert -->
+        <div id="successAlert" class="alert-success">
+          <i class="fa-solid fa-circle-check"></i> Thank you! Your inquiry has been sent successfully.
+        </div>
+      </form>
+    </section>
+
+    
+    <section class="card details-section">
+      <h2><i class="fa-solid fa-building"></i> Office Contact Info</h2>
+      
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Office Address</h4>
+          <p>5th Floor, Cyber Towers,<br>Hi-Tech City,<br>Hyderabad, Telangana,<br>India.</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h4>Phone Numbers</h4>
+          <p>Main Office: +91 98665 98765</p>
+          <p>Support: +91 98754 98754</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>Email Addresses</h4>
+          <p>info@apexrealestate.com</p>
+          <p>support@apexrealestate.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday – Friday: 8:00 AM – 4:00 PM</p>
+          <p>Saturday: 9:00 AM – 1:00 PM </p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+
+      <!-- Map Embed Placeholder -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1952270238817!2d78.37847047398928!3d17.450367583447587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb930036e02df5%3A0xafd92e6778539645!2sCyber%20Towers%20-%20HITEC%20City!5e0!3m2!1sen!2sin!4v1785929923544!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+
+     <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>APEX RealEstate</h3>
+
+                <p>
+
+                    Your trusted partner in real estate.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : info@apexrealestate.com</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Mon-Fri : 9AM - 6PM</p>
+
+            </div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+
+                    5th Floor, Cyber Towers,<br>
+
+                    Hi-Tech City,<br>
+
+                    Hyderabad, Telangana,<br>
+
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 APEX RealEstate. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-links');
+
+        if (!hamburger || !navMenu) return;
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Auto-close menu on link click for seamless mobile experience
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
