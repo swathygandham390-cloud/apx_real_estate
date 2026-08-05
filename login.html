@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+
+                  *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+            header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+    margin-top: -15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+@media(max-width:768px) {
+
+
+    .nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    form{
+        margin-left: -500px;
+        width: 850px;
+        padding:20px;
+    }
+
+    .signup-link{
+        margin-left: -70px;
+    }
+}
+        
+           
+            form{
+                    display:flex;
+                 }
+
+                .cont-form{
+                    margin-top: 120px;
+                    width:400px;
+                    height: 500px;
+                    margin-left: 500px;
+                    box-sizing: border-box;
+                    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+                    border-radius: 25px;
+                    border: 2px solid white;
+                    text-align: left;
+                    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    padding: 10px;
+                }
+
+                .h22{
+                    justify-content: center;
+                    text-align: center;
+                   
+                    color:white;
+                }
+
+                .p2{
+                    justify-content: center;
+                    text-align: center;
+                    padding-bottom: 5px;
+                }
+
+                .fields{
+                    padding-left: 60px;
+                     }
+
+                .btn{
+                    width: 60%;
+                     height: 45px;
+                    margin-top: 50px;
+                    margin-left: 80px;
+                    padding: 10px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: #fff;
+                    color: #667eea;
+                    border:1px solid black;
+                    border-radius: 15px;
+                    cursor:pointer;
+                    margin-top: 20px;
+                    transition: 0.3s;
+                }
+
+                .btn:hover{
+                    background-color: #ffcc00;
+                    color:white;
+                }
+
+                .input{
+                    margin-bottom: 20px;
+                    text-align: left;
+                    width:85%;
+                    padding: 15px;
+                    font-size: 16px;
+                    border: 2px solid white;
+                    border-radius: 15px;
+                    outline: none;
+                    box-sizing: border-box;
+                }
+
+                .l3{
+                    margin-left: 80px;
+                    color:white;
+                }
+
+                .l1{
+                    color:white;
+                }
+
+                .l2{
+                    color:white;
+                }
+
+                .signup-link{
+                    margin-top: 20px;
+                    padding-left: 70px;
+                    color:white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                .signup-link a{
+                    color:#ffcc00;
+                    text-decoration: none;
+                }
+
+           
+        </style>
+
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" type="image/png" href="inminilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="incss.css">
+    </head>
+
+
+    <body>
+ <header>
+<nav class="navbar">
+<div class="logo">
+<img src="apex.jpg" alt="logo"></a>
+ </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Property Listings</a></li>
+                <li><a href="agents.html">Agents Directory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+  
+   
+   <form id="loginForm">
+        <div class="cont-form">
+            <h2 class="h22">Welcome Back</h2>
+            <p class="p2">Login to your Apex Real Estate Account</p>
+                    <div class="fields">
+                    <label class="l1" for="email">Email</label><br>
+                    <input class="input" type="email" placeholder="enter your email" required><br>
+                    <br>
+                    <label class="l2" for="password">Password</label><br>
+                    <input class="input" type="password" placeholder="enter your password" required><br>
+                    </div>
+                    <br>
+                    <label class="l3"><input type="checkbox">Remember me</label>
+                        <br>
+                     <button type="submit" class="btn">Login</button><br>
+
+    
+            <div class="signup-link">
+                don't have an account?
+                <a href="signup.html">Sign Up</a>
+                 </div>
+
+        </div>
+   </form>
+   
+            </div>
+        </div>
+        <script>
+            const form=document.getElementById('loginForm');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Logged in Successfully');
+                window.location.href="index.html";
+            });
+
+              const navLinks = document.getElementById("navLinks"); 
+             const hamburger = document.getElementById("hamburger");
+            
+             
+            hamburger.addEventListener("click",function(){
+                navLinks.classList.toggle("active");
+            }); 
+
+            </script>
+      
+        
+    </body>
+</html>
